@@ -22,8 +22,7 @@ Secondary Color (Orange): #e0b354;
   --font-l: 24px;
   --font-xl: 30px;
   --padding-s: 10px;
-  --padding-l: 20px
-
+  --padding-l: 20px;
 }
 
 body {
@@ -47,7 +46,6 @@ h2 {
   font-weight: var(--font-reg);
 }
 
-
 h3 {
   font-size: var(--font-m);
   font-weight: var(--font-reg);
@@ -61,7 +59,8 @@ a:visited {
   color: var(--color-visited);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -83,6 +82,7 @@ button,
   transition-duration: 0.4s;
   transition-property: opacity;
 }
+
 button:hover,
 button:focus,
 .button:hover,
@@ -110,20 +110,25 @@ button:focus,
 }
 
 .social-media {
-  width: 30px;
-  display: flex;
+  display: inline-block;
   flex-direction: row;
-  text-align: center;
+  justify-content: center;
+}
+
+.social-media img {
+  width: 30px;
 }
 
 .profile {
   max-width: 700px;
+  padding: var(--padding-l);
   margin: 0 auto;
 }
 
 .about {
   width: 100%;
   margin: 0 auto;
+  padding: var(--padding-l);
   text-align: center;
 }
 
@@ -134,6 +139,7 @@ button:focus,
 
 .contact {
   max-width: 700px;
+  padding: var(--padding-l);
   margin: 0 auto;
 }
 
@@ -172,7 +178,7 @@ button:focus,
 
 .navigation-list li {
   display: inline-block;
-  margin-left: 15px
+  margin-left: 15px;
 }
 
 .grid__item {
@@ -207,15 +213,18 @@ button:focus,
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (min-width: 501px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
@@ -226,12 +235,18 @@ button:focus,
   0% {
     fill: var(--sun-state1);
   }
+
   50% {
     fill: var(--sun-state2);
   }
+
   100% {
     fill: var(--sun-state3);
   }
+}
+
+.berlin-illustration {
+  max-width: 750px;
 }
 
 .sun {
@@ -242,6 +257,7 @@ button:focus,
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -251,11 +267,11 @@ button:focus,
   animation: 30s cloud-move infinite alternate linear;
 }
 
-
 @keyframes cloud-move-reverse {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
