@@ -36,22 +36,38 @@
   <div class="contact">
     <h1>Contact</h1>
 
-    <div>
+    <div class="container">
       <form action="#" method="post" id="contact-form">
-        <label class="standard-label" for="contact-email">E-Mail: </label>
-        <input type="email" id="contact-email" required>
-        <br><br>
-
-        <label class="standard-label" for="telephone">Telephone: </label>
-        <input type="tel" id="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-        <br><br>
-
-        <label class="standard-label" for="message" >Message: </label>
-        <textarea id="message" maxlength="240" required></textarea>
-        <br><br>
-        <input type="submit" value="Send message">
+        <div class="row">
+          <div class="col-25">
+            <label for="email">E-Mail: </label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="email" placeholder="Your E-Mail..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="number">Phone Number: </label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="number" placeholder="XXX-XXX-XXXX" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="message">Your Message: </label>
+          </div>
+          <div class="col-75">
+            <textarea id="message" name="message" maxlength="240" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Send message">
+        </div>
       </form>
     </div>
+
     <br>
     <div>
       First name Last Name<br>
