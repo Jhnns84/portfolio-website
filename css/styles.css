@@ -1,17 +1,9 @@
-/*
-Colors used
-
-Text Color (Dark Gray): #2b2b2b;
-Primary Color (Purple): #357b70;
-Secondary Color (Orange): #e0b354;
-*/
-
 :root {
-  --primary-color: #357b70;
-  --secondary-color: #e0b354;
+  --primary-color: #a53860;
+  --secondary-color: #da627d;
   --dark-grey: #2b2b2b;
-  --color-visited: #05676e;
-  --color-active: #489c79;
+  --color-visited: #ffa5ab;
+  --color-active: #f9dbbd;
   --sun-state1: #edc655;
   --sun-state2: #fcffad;
   --sun-state3: #f76414;
@@ -136,6 +128,140 @@ button:focus,
 .about-list {
   list-style-type: none;
   padding: 0;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-bars {
+  padding: 25px 30px;
+  width: 600px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.skill-bars .bar {
+  margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+  font-weight: var(--font-reg);
+  font-size: var(--font-s);
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow:
+    inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--primary-color);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+  width: 60%;
+}
+
+.bar .progress-line.css span {
+  width: 50%;
+}
+
+.bar .progress-line.js span {
+  width: 40%;
+}
+
+.bar .progress-line.pm span {
+  width: 90%;
+}
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: var(--font-reg);
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: var(--font-s);
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line.html span::after {
+  content: "60%";
+}
+
+.progress-line.css span::after {
+  content: "50%";
+}
+
+.progress-line.js span::after {
+  content: "40%";
+}
+
+.progress-line.pm span::after {
+  content: "90%";
 }
 
 .contact {
