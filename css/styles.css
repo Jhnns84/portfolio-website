@@ -73,8 +73,9 @@ button,
   border: none;
   display: inline-block;
   font-family: inherit;
+  font-weight: var(--font-reg);
   background-color: var(--secondary-color);
-  color: var(--dark-gray);
+  color: var(--dark-grey);
   text-decoration: none;
   padding: var(--padding-s);
   border-radius: 4px;
