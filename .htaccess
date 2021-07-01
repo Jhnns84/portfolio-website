@@ -2,4 +2,3 @@ AuthType Basic
 AuthName "Passwortgeschützter Bereich"
 AuthUserFile /kunden/637713_12053/webseiten/htpwd/.htpasswd
 Require valid-user
-Header always set Content-Security-Policy "upgrade-insecure-requests;"
